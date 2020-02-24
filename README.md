@@ -1,2 +1,8 @@
 # toy_car
-Arduino codes for toy cars. Currently, nothing in particular.
+Arduino を使って, モータ駆動の車のおもちゃを制御してみようという試みです.
+
+***
+
+## ファイル一覧
+### テキストファイル
+- [parts_list.md](./parts_list.md) ; 必要なパーツをリストアップしたものです.

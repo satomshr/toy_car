@@ -24,7 +24,8 @@
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-09032/ (40 円)
 - ブレッドボード BB-801
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-05294/ (200 円)
-
+- タクトスイッチ
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-03647/ (10 円)
 ***
 
 ## モータ周辺

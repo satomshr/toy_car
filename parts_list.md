@@ -114,6 +114,7 @@
 ### 車体
 - ユニバーサルプレート (2 枚セット)
   - 商品 ; https://www.tamiya.com/japan/products/70157/index.html (定価 600 円)
+  - サイズ ; 160 x 60 x 3
 
 ### タイヤ
 - トラックタイヤセット (36mm 径)
@@ -122,8 +123,12 @@
   - 商品 ; https://www.tamiya.com/japan/products/70144/index.html (定価 396 円)
 
 ### 電池ボックス
+- 電池ボックス, 単三 x 2 本, B スナップ
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-00208/ (定価 40 円)
+  - ジャンパーワイヤ付バッテリースナップ ; http://akizukidenshi.com/catalog/g/gP-09032/ (定価 40 円)
 - 単三電池ボックス (2 本用 / スイッチ付き)
   - 商品 ; https://www.tamiya.com/japan/products/70151/index.html (定価 396 円)
+
 
 ### メモ
   - メモ ; タミヤ関係はヨドバシドットコムで買える. 送料無料なので, 一度にたくさん購入する必要はない
@@ -133,4 +138,13 @@
 ## その他
 ### ワイヤ
 - ジャンパーワイヤ
-  - 商品 ; http://akizukidenshi.com/catalog/g/gC-05159/ (220 円)
+  - 商品 ; http://akizukidenshi.com/catalog/g/gC-05159/ (定価 220 円)
+- スズメッキ線
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-02220/ (定価 210 円)
+- プラネジ
+  - 商品 1 ; http://akizukidenshi.com/catalog/g/gP-01861/ (定価 50 円)
+  - 商品 2 ; http://akizukidenshi.com/catalog/g/gP-01885/ (定価 130 円)
+- ミニカードスペーサ
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-10089/ (定価 15 円)
+- 接着式サポート
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-09950/ (定価 60 円)

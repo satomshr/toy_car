@@ -1,5 +1,5 @@
 
-// test_drv8835-01.ico ; test program of DRV8835
+// test_drv8835_01.ico ; test program of DRV8835
 // author ; sato.mshr@gmail.com
 
 // connection of DRV8835

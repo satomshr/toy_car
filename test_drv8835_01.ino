@@ -98,6 +98,8 @@ void loop() {
   analogWrite(PIN_MT_A, HIGH_SPEED);
   analogWrite(PIN_MT_B, HIGH_SPEED);
   mydelay(1);
+  analogWrite(PIN_MT_A, STOP_SPEED);
+  analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC - 1);
 */
 }

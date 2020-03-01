@@ -122,7 +122,9 @@
   - 商品 ; https://www.tamiya.com/japan/products/70101/index.html (定価 396 円)
 - ボールキャスター (2 セット入り)
   - 商品 ; https://www.tamiya.com/japan/products/70144/index.html (定価 396 円)
-
+- 32mm 径スプロケット & クローラーセット
+  - 商品 ; https://www.tamiya.com/japan/products/70229/index.html (定価 550 円)
+  
 ### 電池ボックス
 - 電池ボックス, 単三 x 2 本, B スナップ
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-00208/ (定価 40 円)

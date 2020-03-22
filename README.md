@@ -18,3 +18,6 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - drv8835.h ; header file of Drv8835 class
   - drv8835.cpp ; cpp file of Drv8835 class
   - [test_drv8835_02.ino](./test_drv8835_02/test_drv8835_02.ino) ; test program for DRV8835 motor driver using Drv8835 class
+
+- ./buying_list/
+  - lists of part I bought

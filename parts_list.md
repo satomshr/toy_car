@@ -26,6 +26,10 @@
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-05294/ (200 円)
 - タクトスイッチ
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-03647/ (10 円)
+- カーボン抵抗 (炭素被膜抵抗) 1/4-10kΩ (100 本入)
+  - 商品 ; http://akizukidenshi.com/catalog/g/gR-25103/ (100 円)
+- 参考
+  - 電源電圧は 3.78 ～ 5.5V (https://synapse.kyoto/hard/miniaturize_arduino_project/page003.html)
 ***
 
 ## モータ周辺
@@ -124,11 +128,13 @@
   - 商品 ; https://www.tamiya.com/japan/products/70144/index.html (定価 396 円)
 - 32mm 径スプロケット & クローラーセット
   - 商品 ; https://www.tamiya.com/japan/products/70229/index.html (定価 550 円)
-  
+
 ### 電池ボックス
 - 電池ボックス, 単三 x 2 本, B スナップ
   - 商品 ; http://akizukidenshi.com/catalog/g/gP-00208/ (定価 40 円)
   - ジャンパーワイヤ付バッテリースナップ ; http://akizukidenshi.com/catalog/g/gP-09032/ (定価 40 円)
+- 電池ボックス, 単三 x 3 本, B スナップ
+  - 商品 ; http://akizukidenshi.com/catalog/g/gP-02677/ (定価 50 円)
 - 単三電池ボックス (2 本用 / スイッチ付き)
   - 商品 ; https://www.tamiya.com/japan/products/70151/index.html (定価 396 円)
 

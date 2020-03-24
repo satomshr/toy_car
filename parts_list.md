@@ -1,6 +1,12 @@
 # パーツリスト
 ***
-## Arduino
+## Arduino (格安完成品を買うなら)
+### Arduino UNO 互換
+- KKHMF UNO R3 開発ボード USB ケーブル付属 Arduinoと互換
+  - 商品 ; https://www.amazon.co.jp/KKHMF-UNO-R3%E9%96%8B%E7%99%BA%E3%83%9C%E3%83%BC%E3%83%89-USB%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BB%98%E5%B1%9E-Arduino%E3%81%A8%E4%BA%92%E6%8F%9B/dp/B018VYJIEU/ (482 円)
+***
+
+## Arduino (パーツを集めて作るなら)
 ### Arduino 本体
 - Arduino Bootloader 書き込み済み (5V, 16MHz 仕様)
   - 商品 ; http://akizukidenshi.com/catalog/g/gI-12774/ (320 円)

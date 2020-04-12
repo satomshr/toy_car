@@ -21,7 +21,7 @@
 #define PIN_MT_A 5
 #define PIN_MT_B 6
 
-#define DELAY_SEC 10
+#define DELAY_SEC 5
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 76 // 255 / 5V * 1.5V
 #define STOP_SPEED 0
@@ -52,54 +52,54 @@ void loop() {
   mydelay(DELAY_SEC);
 
   // CW, Low speed
-/*
+
   analogWrite(PIN_MT_A, LOW_SPEED);
   analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // CW, STOP (Coast)
-/*
+
   analogWrite(PIN_MT_A, STOP_SPEED);
   analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // CCW, High speed
-/*
+
   analogWrite(PIN_MT_A, STOP_SPEED);
   analogWrite(PIN_MT_B, HIGH_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // CCW, Low speed
-/*
+
   analogWrite(PIN_MT_A, STOP_SPEED);
   analogWrite(PIN_MT_B, LOW_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // CCW, STOP (Coast)
-/*
+
   analogWrite(PIN_MT_A, STOP_SPEED);
   analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // CW, High speed
-/*
+
   analogWrite(PIN_MT_A, HIGH_SPEED);
   analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC);
-*/
+
 
   // Brake
-/*
+
   analogWrite(PIN_MT_A, HIGH_SPEED);
   analogWrite(PIN_MT_B, HIGH_SPEED);
   mydelay(1);
   analogWrite(PIN_MT_A, STOP_SPEED);
   analogWrite(PIN_MT_B, STOP_SPEED);
   mydelay(DELAY_SEC - 1);
-*/
+
 }

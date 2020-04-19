@@ -19,5 +19,7 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - drv8835.cpp ; cpp file of Drv8835 class
   - [test_drv8835_02.ino](./test_drv8835_02/test_drv8835_02.ino) ; test program for DRV8835 motor driver using Drv8835 class
 
+- [./test_motor_sensor_01/test_motor_sensor01.ino](./test_motor_sensor_01/test_motor_sensor01.ino) ; test program of motor (DRV8835) and ultrasonic sensor (HC-SR40)
+
 - ./buying_list/
   - lists of part I bought

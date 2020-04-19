@@ -40,6 +40,8 @@ void mydelay(int s) // for delaying
 
 void setup() {
   // put your setup code here, to run once:
+  analogWrite(PIN_MT_A, STOP_SPEED);
+  analogWrite(PIN_MT_B, STOP_SPEED);
   pinMode(PIN_LED, OUTPUT);
 }
 

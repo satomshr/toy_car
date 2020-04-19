@@ -20,6 +20,8 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - [test_drv8835_02.ino](./test_drv8835_02/test_drv8835_02.ino) ; test program for DRV8835 motor driver using Drv8835 class
 
 - [./test_motor_sensor_01/test_motor_sensor01.ino](./test_motor_sensor_01/test_motor_sensor01.ino) ; test program of motor (DRV8835) and ultrasonic sensor (HC-SR40)
+  - memo
+    1. speed of toy car ; 2.5m / 6.7s = 0.373m/s (at 3V)
 
 - ./buying_list/
   - lists of part I bought

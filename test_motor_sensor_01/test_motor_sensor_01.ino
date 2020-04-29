@@ -37,7 +37,7 @@
 #define STOP_SPEED 0
 
 #define STOP_DISTANCE 15 // cm
-#define BACK_DISTANCE 10 // cm
+#define BACK_DISTANCE 5 // cm
 
 float cm;
 

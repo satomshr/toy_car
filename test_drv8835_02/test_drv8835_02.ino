@@ -3,17 +3,17 @@
 // author ; sato.mshr@gmail.com
 
 // connection of DRV8835
-// Vcc = 5V
+// Vcc = 5V (from Arduino)
 // MODE = GND (using IN/IN mode)
 // AIN1 = D5 (arduino)
 // AIN2 = D6 (arduino)
-// BIN1 = GND
-// BIN2 = GND
-// VM = 3V
+// BIN1 = D10
+// BIN2 = D11
+// VM = 3V (from battery)
 // AOUT1 = Motor
 // AOUT2 = Motor
-// BOUT1 = open
-// BOUT2 = open
+// BOUT1 = Motor
+// BOUT2 = Motor
 // GND = GND
 
 // include file
@@ -21,10 +21,12 @@
 
 // Arduino Pin assign
 #define PIN_LED 13
-#define PIN_MT_A 5
-#define PIN_MT_B 6
+#define PIN_MT_R1 5
+#define PIN_MT_R2 6
+#define PIN_MT_L1 10
+#define PIN_MT_L2 11
 
-#define DELAY_SEC 10
+#define DELAY_SEC 2
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 76 // 255 / 5V * 1.5V
 #define STOP_SPEED 0
@@ -41,7 +43,8 @@ void mydelay(int s) // for delaying
   }
 }
 
-Drv8835 mt(PIN_MT_A, PIN_MT_B);
+Drv8835 mt_r(PIN_MT_R1, PIN_MT_R2);
+Drv8835 mt_l(PIN_MT_L1, PIN_MT_L2);
 
 void setup() {
   // put your setup code here, to run once:
@@ -52,36 +55,57 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   // CW, High speed
-  mt.cw(HIGH_SPEED);
-  mydelay(DELAY_SEC);
-
-  // CW, Low speed
-  // mt.cw(LOW_SPEED);
-  // mydelay(DELAY_SEC);
+//  mt_r.cw(HIGH_SPEED);
+//  mt_l.cw(HIGH_SPEED);
+//  mydelay(DELAY_SEC);
 
   // CW, STOP (Coast)
-  // mt.stop();
-  // mydelay(DELAY_SEC);
+//  mt_r.stop();
+//  mt_l.stop();
+//  mydelay(DELAY_SEC);
 
   // CCW, High speed
-  // mt.ccw(HIGH_SPEED);
-  // mydelay(DELAY_SEC);
-
-  // CCW, Low speed
-  // mt.ccw(LOW_SPEED);
-  // mydelay(DELAY_SEC);
-
-  // CCW, STOP (Coast)
-  // mt.stop();
-  // mydelay(DELAY_SEC);
-
-  // CW, High speed
-  // mt.cw(HIGH_SPEED);
-  // mydelay(DELAY_SEC);
+//  mt_r.ccw(HIGH_SPEED);
+//  mt_l.ccw(HIGH_SPEED);
+//  mydelay(DELAY_SEC);
 
   // Brake
-  // mt.brake(HIGH_SPEED);
-  // mydelay(1);
-  // mt.stop();
-  // mydelay(DELAY_SEC - 1);
+//  mt_r.brake(HIGH_SPEED);
+//  mt_l.brake(HIGH_SPEED);
+//  mydelay(1);
+//  mt_r.stop();
+//  mt_l.stop();
+//  mydelay(DELAY_SEC - 1);
+
+  // CW (Right), CCW (Left)
+//  mt_r.cw(HIGH_SPEED);
+//  mt_l.ccw(HIGH_SPEED);
+//  mydelay(DELAY_SEC);
+
+  // Stop (Coast)
+//  mt_r.stop();
+//  mt_l.stop();
+//  mydelay(DELAY_SEC);
+
+  // CCW (Right), CW (Left)
+//  mt_r.ccw(HIGH_SPEED);
+//  mt_l.cw(HIGH_SPEED);
+//  mydelay(DELAY_SEC);
+
+// CW, High speed
+  mt_r.cw(HIGH_SPEED);
+  mt_l.cw(HIGH_SPEED);
+  mydelay(DELAY_SEC);
+
+// Turn to the Right
+  mt_r.stop();
+  mydelay(DELAY_SEC);
+  
+  // Brake
+  mt_r.brake(HIGH_SPEED);
+  mt_l.brake(HIGH_SPEED);
+  mydelay(1);
+  mt_r.stop();
+  mt_l.stop();
+  mydelay(DELAY_SEC - 1);
 }

@@ -23,5 +23,12 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - memo
     1. speed of toy car ; 2.5m / 6.7s = 0.373m/s (at 3V)
 
+- ./test_motor_sensor_02/
+  - drv8835.h ; header file of Drv8835 class
+  - drv8835.cpp ; cpp file of Drv8835 class
+  - hcsr04.h ; header file of Hcsr04 class
+  - hcsr04.cpp ; cpp file of Hcsr04 class
+  - test_motor_sensor02.ico ; test program of motors (Twin gear box (Tamiya) controlled by DRV8835) and ultrasonic sensor (HC-SR04)
+
 - ./buying_list/
   - lists of part I bought

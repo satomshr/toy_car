@@ -1,5 +1,5 @@
 
-// test_drv8835_02.ico ; test program of DRV8835
+// test_motor_sensor_02.ico ; test program of DRV8835
 // author ; sato.mshr@gmail.com
 
 // connection of DRV8835
@@ -36,12 +36,13 @@
 
 
 #define DELAY_MSEC 100
+#define DELAY_TURN_MSEC 650 // When turning, delays DELAY_TURN_MSEC + DELAY_MSEC
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 76 // 255 / 5V * 1.5V
 #define STOP_SPEED 0
 
-#define STOP_DISTANCE 17 // cm
-#define BACK_DISTANCE 7 // cm
+#define STOP_DISTANCE 35 // cm
+#define BACK_DISTANCE 20 // cm
 
 Drv8835 mt_r(PIN_MT_R1, PIN_MT_R2); // motor of right wheel
 Drv8835 mt_l(PIN_MT_L1, PIN_MT_L2); // motor of left wheel
@@ -65,6 +66,7 @@ void loop() {
     // Turn to the Right
     mt_r.stop();
     mt_l.cw(HIGH_SPEED);
+    delay(DELAY_TURN_MSEC);
   } else{
     // Go backwards slowly (CCW, Low speed)
     mt_r.ccw(LOW_SPEED);

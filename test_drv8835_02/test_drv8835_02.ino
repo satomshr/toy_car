@@ -26,7 +26,7 @@
 #define PIN_MT_L1 10
 #define PIN_MT_L2 11
 
-#define DELAY_SEC 2
+#define DELAY_SEC 3
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 76 // 255 / 5V * 1.5V
 #define STOP_SPEED 0
@@ -93,14 +93,28 @@ void loop() {
 //  mydelay(DELAY_SEC);
 
 // CW, High speed
-  mt_r.cw(HIGH_SPEED);
+//  mt_r.cw(HIGH_SPEED);
+//  mt_l.cw(HIGH_SPEED);
+//  mydelay(DELAY_SEC);
+
+  // Turn to the Right
+  mt_r.stop();
   mt_l.cw(HIGH_SPEED);
   mydelay(DELAY_SEC);
 
-// Turn to the Right
+  // Brake
+  mt_r.brake(HIGH_SPEED);
+  mt_l.brake(HIGH_SPEED);
+  mydelay(1);
   mt_r.stop();
+  mt_l.stop();
+  mydelay(DELAY_SEC - 1);
+
+  // Turn to the Left
+  mt_r.cw(HIGH_SPEED);
+  mt_l.stop();
   mydelay(DELAY_SEC);
-  
+
   // Brake
   mt_r.brake(HIGH_SPEED);
   mt_l.brake(HIGH_SPEED);

@@ -12,7 +12,7 @@ Hcsr04::Hcsr04(int p_trig, int p_echo)
   _distance = 0;
 }
 
-int Hcsr04::distance(void)
+float Hcsr04::distance(void)
 {
   digitalWrite(_p_trig, LOW);
   delayMicroseconds(2);

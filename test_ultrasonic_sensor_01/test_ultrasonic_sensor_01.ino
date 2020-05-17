@@ -7,10 +7,10 @@
 // Arduino pin assign
 #define US_A_T 2
 #define US_A_E 3
-#define US_B_T 4
-#define US_B_E 5
-#define US_C_T 6
-#define US_C_E 7
+#define US_B_T 7
+#define US_B_E 8
+#define US_C_T 9
+#define US_C_E 12
 
 Hcsr04 us_a(US_A_T, US_A_E);
 Hcsr04 us_b(US_B_T, US_B_E);

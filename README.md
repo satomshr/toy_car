@@ -30,5 +30,22 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - hcsr04.cpp ; cpp file of Hcsr04 class
   - test_motor_sensor02.ico ; test program of motors (Twin gear box (Tamiya) controlled by DRV8835) and ultrasonic sensor (HC-SR04)
 
+- ./test_motor_sensor_03/
+  - drv8835.h ; header file of Drv8835 class
+  - drv8835.cpp ; cpp file of Drv8835 class
+  - hcsr04.h ; header file of Hcsr04 class
+  - hcsr04.cpp ; header file of Hcsr04 class
+  - ./test_motor_sensor_03.ino ; test program of motors (Twin gear box (Tamiya) controlled by DRV8835) and three ultrasonic sensors (HC-SR04)
+
+- ./test_ultrasonic_sensor_01/
+  - test_ultrasonic_sensor_01.ino ; test program for ultrasonic sensor HC-SR04
+  - hcsr04.h ; header file of Hcsr04 class
+  - hcsr04.cpp ; cpp file of Hcsr04 class
+
+- ./test_ultrasonic_sensor_02/
+  - test_ultrasonic_sensor_02.ino ; test program for ultrasonic sensor HC-SR04
+  - hcsr04tri.h ; header file of Hcsr04tri class (3 sensors in one object)
+  - hcsr04tri.cpp ; cpp file of Hcsr04tri class (3 sensors in one object)
+
 - ./buying_list/
   - lists of part I bought

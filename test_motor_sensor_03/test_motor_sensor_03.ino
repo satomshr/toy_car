@@ -49,7 +49,7 @@
 #define STOP_DISTANCE_SIDE 35 // cm
 #define BACK_DISTANCE 20 // cm
 
-#define MY_DEBUG 1
+#define MY_DEBUG 2
 
 Drv8835 mt_r(PIN_MT_R1, PIN_MT_R2); // motor of right wheel
 Drv8835 mt_l(PIN_MT_L1, PIN_MT_L2); // motor of left wheel

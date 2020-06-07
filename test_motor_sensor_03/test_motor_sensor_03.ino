@@ -40,16 +40,14 @@
 #define PIN_L_ECHO 12
 
 #define DELAY_MSEC 100
-#define DELAY_TURN_MSEC 650 // When turning, delays DELAY_TURN_MSEC + DELAY_MSEC
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 51 // 255 / 5V * 1V
 #define STOP_SPEED 0
 
-#define STOP_DISTANCE_FRONT 35 // cm
-#define STOP_DISTANCE_SIDE 35 // cm
-#define BACK_DISTANCE 20 // cm
+#define STOP_DISTANCE_FRONT 40 // cm
+#define STOP_DISTANCE_SIDE 25 // cm
 
-#define MY_DEBUG 2
+#define MY_DEBUG 1
 
 Drv8835 mt_r(PIN_MT_R1, PIN_MT_R2); // motor of right wheel
 Drv8835 mt_l(PIN_MT_L1, PIN_MT_L2); // motor of left wheel
@@ -87,10 +85,9 @@ void loop() {
     Serial.print(cm_r);
     Serial.print("cm,\tL = ");
     Serial.print(cm_l);
-    Serial.print("cm");
-    Serial.println();
+    Serial.println("cm");
   }
-  if(++loop_count == 10){
+  if(++loop_count == (int)(1000 / DELAY_MSEC)){
     loop_count = 0;
   }
 #endif
@@ -112,44 +109,85 @@ void loop() {
 */
 
   if(f_ok){
+    #ifdef MY_DEBUG
+      Serial.print("\tF OK!");
+    #endif
     if(r_ok && l_ok){
+      #ifdef MY_DEBUG
+        Serial.print("\tStraight!");
+      #endif
       mt_r.cw(HIGH_SPEED);
       mt_l.cw(HIGH_SPEED);
     } else if(r_ok && !l_ok){
+      #ifdef MY_DEBUG
+        Serial.print("\tRight!");
+      #endif
       mt_r.cw(LOW_SPEED);
       mt_l.cw(HIGH_SPEED);
     } else if(!r_ok && l_ok){
+      #ifdef MY_DEBUG
+        Serial.print("\tLeft!");
+      #endif
       mt_r.cw(HIGH_SPEED);
       mt_l.cw(LOW_SPEED);
     } else{ // !r_ok && !l_ok
+      #ifdef MY_DEBUG
+        Serial.print("\tstraight...");
+      #endif
       mt_r.cw(HIGH_SPEED);
       mt_l.cw(HIGH_SPEED);
     }
+    #ifdef MY_DEBUG
+      Serial.println();
+    #endif
     delay(DELAY_MSEC);
   } else{
+    #ifdef MY_DEBUG
+      Serial.print("\tF NG!");
+    #endif
+
     // stop once
+    #ifdef MY_DEBUG
+      Serial.print("\tStop!");
+    #endif
     mt_r.stop();
     mt_l.stop();
     delay(DELAY_MSEC * 2);
 
     // go backward
+    #ifdef MY_DEBUG
+      Serial.print("\tBack!");
+    #endif
     mt_r.ccw(HIGH_SPEED);
     mt_l.ccw(HIGH_SPEED);
     delay(DELAY_MSEC * 5);
 
     // stop once
+    #ifdef MY_DEBUG
+      Serial.print("\tStop!");
+    #endif
     mt_r.stop();
     mt_l.stop();
     delay(DELAY_MSEC * 2);
 
     // turn
     if(r_ok){
-      mt_r.cw(LOW_SPEED);
+      #ifdef MY_DEBUG
+        Serial.print("\tRight!");
+      #endif
+      mt_r.stop();
       mt_l.cw(HIGH_SPEED);
     } else{
+      #ifdef MY_DEBUG
+        Serial.print("\tLeft!");
+      #endif
       mt_r.cw(HIGH_SPEED);
-      mt_l.cw(LOW_SPEED);
+      mt_l.stop();
     }
     delay(DELAY_MSEC * 5);
+
+    #ifdef MY_DEBUG
+      Serial.println();
+    #endif
   }
 }

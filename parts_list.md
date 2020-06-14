@@ -103,7 +103,7 @@
 - カーボン抵抗 (炭素皮膜抵抗) 1/4-330Ω (100 本入)
   - 商品 ; http://akizukidenshi.com/catalog/g/gR-25331/ (100 円)
 
-- メモ ; 距離センサの検出状況を LED で見えるようにしたい. でも I/O の数を考えると, 細かい出力はできない
+- メモ ; 距離センサの検出状況を LED で見えるようにしたい. でも I/O の数を考えると無理っぽい
 
 ***
 
@@ -126,6 +126,13 @@
 - ユニバーサルプレート (2 枚セット)
   - 商品 ; https://www.tamiya.com/japan/products/70157/index.html (定価 600 円)
   - サイズ ; 160 x 60 x 3
+- ユニバーサルアームセット (オレンジ)
+  - 商品 ; https://www.tamiya.com/japan/products/70183/index.html (定価 462 円)
+- 3mm プッシュリベットセット
+  - 商品 ; https://www.tamiya.com/japan/products/70155/index.html (定価 396 円)
+- プラバン 1.0mm 厚 B4 サイズ (2 枚入)
+  - 商品 ; https://www.tamiya.com/japan/products/70124/index.html (定価 792 円)
+  - 用途 ; モータの固定など
 
 ### タイヤ
 - トラックタイヤセット (36mm 径)

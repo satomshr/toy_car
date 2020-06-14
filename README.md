@@ -47,5 +47,8 @@ Arduino を使って, モータ駆動の車のおもちゃを制御してみよ�
   - hcsr04tri.h ; header file of Hcsr04tri class (3 sensors in one object)
   - hcsr04tri.cpp ; cpp file of Hcsr04tri class (3 sensors in one object)
 
+- ./test_servo
+  - See [./test_servo/README.md](./test_servo/README.md)
+
 - ./buying_list/
   - lists of part I bought

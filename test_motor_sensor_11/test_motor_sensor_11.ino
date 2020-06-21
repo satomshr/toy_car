@@ -39,8 +39,8 @@
 #include "hcsr04.h"
 
 // Arduino Pin assign
-#define PIN_MT_1 5
-#define PIN_MT_2 6
+#define PIN_MT_1 6
+#define PIN_MT_2 5
 
 #define PIN_SERVO 9
 

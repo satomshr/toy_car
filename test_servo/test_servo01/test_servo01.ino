@@ -9,7 +9,7 @@
 
 #define SERVO_PIN 9
 #define D_CENTER 90
-#define D_RANGE 15
+#define D_RANGE 12
 #define MY_DELAY 100
 
 Servo myservo;
@@ -27,6 +27,9 @@ void setup()
 
 void loop()
 {
+  myservo.write(D_CENTER);
+  delay(MY_DELAY * 10);
+
   for (pos = str; pos <= stp; pos++) { // goes from 30 degrees to 150 degrees
     // in steps of 1 degree
     myservo.write(pos);              // tell servo to go to position in variable 'pos'

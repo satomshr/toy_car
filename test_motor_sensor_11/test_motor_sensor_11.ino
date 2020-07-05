@@ -65,7 +65,7 @@
 
 #define MY_DEBUG 1
 
-Drv8835 mt_r(PIN_MT_1, PIN_MT_2); // motor of wheel
+Drv8835 mt(PIN_MT_1, PIN_MT_2); // motor of wheel
 Servo myservo; // servo motor
 Hcsr04 us_f(PIN_F_TRIG, PIN_F_ECHO); // ultrasonic ssensor for front
 Hcsr04 us_r(PIN_R_TRIG, PIN_R_ECHO); // ultrasonic ssensor for right side
@@ -115,98 +115,23 @@ void loop() {
   r_ok = (cm_r > STOP_DISTANCE_SIDE);
   l_ok = (cm_l > STOP_DISTANCE_SIDE);
 
-/*
-  algorithm
-    F ok, R ok, L ok -> go ahead
-    F ok, R ok, L ng -> turn right
-    F ok, R ng, L ok -> turn left
-    F ok, R ng, L ng -> go ahead
-    F ng, R ok, L ok -> stop once, go backward and turn right (or left)
-    F ng, R ok, L ng -> stop once, go backward and turn right
-    F ng, R ng, L ok -> stop once, go backward and turn left
-    F ng, R ng, L ng -> stop once, go backward and backward, and turn right (or left)
-*/
+  // STOP
+  myservo.write(SERVO_CENTER);
+  mt.stop();
+  delay(5000);
 
-  if(f_ok){
-    #ifdef MY_DEBUG
-      Serial.print("\tF OK!");
-    #endif
-    if(r_ok && l_ok){
-      #ifdef MY_DEBUG
-        Serial.print("\tStraight!");
-      #endif
-      mt_r.cw(HIGH_SPEED);
-      mt_l.cw(HIGH_SPEED);
-    } else if(r_ok && !l_ok){
-      #ifdef MY_DEBUG
-        Serial.print("\tRight!");
-      #endif
-      mt_r.cw(LOW_SPEED);
-      mt_l.cw(HIGH_SPEED);
-    } else if(!r_ok && l_ok){
-      #ifdef MY_DEBUG
-        Serial.print("\tLeft!");
-      #endif
-      mt_r.cw(HIGH_SPEED);
-      mt_l.cw(LOW_SPEED);
-    } else{ // !r_ok && !l_ok
-      #ifdef MY_DEBUG
-        Serial.print("\tstraight...");
-      #endif
-      mt_r.cw(HIGH_SPEED);
-      mt_l.cw(HIGH_SPEED);
-    }
-    #ifdef MY_DEBUG
-      Serial.println();
-    #endif
-    delay(DELAY_MSEC);
-  } else{
-    #ifdef MY_DEBUG
-      Serial.print("\tF NG!");
-    #endif
+  // go straight
+  myservo.write(SERVO_CENTER);
+  mt.cw(HIGH_SPEED);
+  delay(1000);
 
-    // stop once
-    #ifdef MY_DEBUG
-      Serial.print("\tStop!");
-    #endif
-    mt_r.stop();
-    mt_l.stop();
-    delay(DELAY_MSEC * 2);
+  // turn right
+  myservo.write(SERVO_RIGHT);
+  mt.cw(HIGH_SPEED);
+  delay(3000);
 
-    // go backward
-    #ifdef MY_DEBUG
-      Serial.print("\tBack!");
-    #endif
-    mt_r.ccw(HIGH_SPEED);
-    mt_l.ccw(HIGH_SPEED);
-    delay(DELAY_MSEC * 5);
-
-    // stop once
-    #ifdef MY_DEBUG
-      Serial.print("\tStop!");
-    #endif
-    mt_r.stop();
-    mt_l.stop();
-    delay(DELAY_MSEC * 2);
-
-    // turn
-    if(r_ok){
-      #ifdef MY_DEBUG
-        Serial.print("\tRight!");
-      #endif
-      mt_r.stop();
-      mt_l.cw(HIGH_SPEED);
-    } else{
-      #ifdef MY_DEBUG
-        Serial.print("\tLeft!");
-      #endif
-      mt_r.cw(HIGH_SPEED);
-      mt_l.stop();
-    }
-    delay(DELAY_MSEC * 5);
-
-    #ifdef MY_DEBUG
-      Serial.println();
-    #endif
-  }
+  // turn left
+  myservo.write(SERVO_LEFT);
+  mt.cw(HIGH_SPEED);
+  delay(3000);
 }

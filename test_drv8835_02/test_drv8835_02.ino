@@ -54,28 +54,30 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
+  mydelay(DELAY_SEC);
+
   // CW, High speed
-//  mt_r.cw(HIGH_SPEED);
-//  mt_l.cw(HIGH_SPEED);
-//  mydelay(DELAY_SEC);
+  mt_r.cw(HIGH_SPEED);
+  mt_l.cw(HIGH_SPEED);
+  mydelay(DELAY_SEC);
 
   // CW, STOP (Coast)
-//  mt_r.stop();
-//  mt_l.stop();
-//  mydelay(DELAY_SEC);
+  mt_r.stop();
+  mt_l.stop();
+  mydelay(DELAY_SEC);
 
   // CCW, High speed
-//  mt_r.ccw(HIGH_SPEED);
-//  mt_l.ccw(HIGH_SPEED);
-//  mydelay(DELAY_SEC);
+  mt_r.ccw(HIGH_SPEED);
+  mt_l.ccw(HIGH_SPEED);
+  mydelay(DELAY_SEC);
 
   // Brake
-//  mt_r.brake(HIGH_SPEED);
-//  mt_l.brake(HIGH_SPEED);
-//  mydelay(1);
-//  mt_r.stop();
-//  mt_l.stop();
-//  mydelay(DELAY_SEC - 1);
+  mt_r.brake(HIGH_SPEED);
+  mt_l.brake(HIGH_SPEED);
+  mydelay(1);
+  mt_r.stop();
+  mt_l.stop();
+  mydelay(DELAY_SEC - 1);
 
   // CW (Right), CCW (Left)
 //  mt_r.cw(HIGH_SPEED);
@@ -98,28 +100,36 @@ void loop() {
 //  mydelay(DELAY_SEC);
 
   // Turn to the Right
+/*
   mt_r.stop();
   mt_l.cw(HIGH_SPEED);
   mydelay(DELAY_SEC);
+*/
 
   // Brake
+/*
   mt_r.brake(HIGH_SPEED);
   mt_l.brake(HIGH_SPEED);
   mydelay(1);
   mt_r.stop();
   mt_l.stop();
   mydelay(DELAY_SEC - 1);
+*/
 
   // Turn to the Left
+/*
   mt_r.cw(HIGH_SPEED);
   mt_l.stop();
   mydelay(DELAY_SEC);
+*/
 
   // Brake
+/*
   mt_r.brake(HIGH_SPEED);
   mt_l.brake(HIGH_SPEED);
   mydelay(1);
   mt_r.stop();
   mt_l.stop();
   mydelay(DELAY_SEC - 1);
+*/
 }

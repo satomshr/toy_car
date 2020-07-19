@@ -21,8 +21,8 @@
 
 // Arduino Pin assign
 #define PIN_LED 13
-#define PIN_MT_R1 5
-#define PIN_MT_R2 6
+#define PIN_MT_R1 3
+#define PIN_MT_R2 9
 #define PIN_MT_L1 10
 #define PIN_MT_L2 11
 

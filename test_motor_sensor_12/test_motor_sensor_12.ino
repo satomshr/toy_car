@@ -38,13 +38,14 @@
 #define PIN_F_TRIG 5
 #define PIN_F_ECHO 6
 
-#define DELAY_MSEC 1000
+#define FWD_DELAY_MSEC 1000
+#define TRN_DELAY_MSEC 700
 #define HIGH_SPEED 153 // 255 / 5V * 3V
 #define LOW_SPEED 76 // 255 / 5V * 1.5V
 #define STOP_SPEED 0
 
-#define STOP_DISTANCE_FRONT 40 // cm
-#define STOP_DISTANCE_SIDE 25 // cm
+#define TURN_DISTANCE 30 // cm
+#define STOP_DISTANCE 20 // cm
 
 #define MY_DEBUG 1
 
@@ -62,7 +63,7 @@ void setup() {
   // put your setup code here, to run once:
   mt_r.stop();
   mt_l.stop();
-  delay(DELAY_MSEC * 5);
+  delay(FWD_DELAY_MSEC * 5);
 
 
 #ifdef MY_DEBUG
@@ -75,6 +76,18 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   cm_f = us_f.distance();
+
+  if(cm_f < TURN_DISTANCE){
+    // turn to the left (right; backward, left; forward)
+    mt_r.ccw(HIGH_SPEED);
+    mt_l.cw(HIGH_SPEED);
+    delay(TRN_DELAY_MSEC);
+  } else{
+    // go forward
+    mt_r.cw(HIGH_SPEED);
+    mt_l.cw(HIGH_SPEED);
+    delay(FWD_DELAY_MSEC);
+  }
 
 /*
 #ifdef MY_DEBUG
@@ -127,32 +140,44 @@ void loop() {
 
 
   // both wheels, forward
+/*
   mt_r.cw(HIGH_SPEED);
   mt_l.cw(HIGH_SPEED);
   delay(DELAY_MSEC * 3);
+*/
 
   // stop once
+/*
   mt_r.stop();
   mt_l.stop();
   delay(DELAY_MSEC * 2);
+*/
 
   // turn to the right (right; forward, left; backward)
+/*
   mt_r.cw(HIGH_SPEED);
   mt_l.ccw(HIGH_SPEED);
   delay(DELAY_MSEC * 3);
+*/
 
   // stop once
+/*
   mt_r.stop();
   mt_l.stop();
   delay(DELAY_MSEC * 2);
+*/
 
   // turn to the left (right; backward, left; forward)
+/*
   mt_r.ccw(HIGH_SPEED);
   mt_l.cw(HIGH_SPEED);
   delay(DELAY_MSEC * 3);
+*/
 
   // stop once
+/*
   mt_r.stop();
   mt_l.stop();
   delay(DELAY_MSEC * 2);
+*/
 }

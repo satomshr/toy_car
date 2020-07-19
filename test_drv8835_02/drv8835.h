@@ -24,4 +24,4 @@ private:
   int _ina, _inb, _status, _speed;
 };
 
-#endif DRV8835_H
+#endif
